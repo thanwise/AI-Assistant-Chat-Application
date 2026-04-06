@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <button class="new-chat-btn"><i class="fa-solid fa-plus"></i> New Chat</button>
+            <div class="chat-history">
+                <div class="history-section-title">Today</div>
+                <div class="history-item active"><i class="fa-regular fa-message"></i> Html page like chat gpt</div>
+                <div class="history-item"><i class="fa-regular fa-message"></i> Explain quantum computing</div>
+                
+                <div class="history-section-title">Previous 7 Days</div>
+                <div class="history-item"><i class="fa-regular fa-message"></i> Write a Python script</div>
+                <div class="history-item"><i class="fa-regular fa-message"></i> Best sci-fi movies</div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=User&background=333&color=fff" alt="User">
+                    <span>User Profile</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <!-- Header -->
+            <header class="chat-header">
+                <h2><img src="logo.png" alt="Logo" style="height: 24px; vertical-align: middle; margin-right: 8px;"> AI Assistant <span class="badge">GPT-4</span></h2>
+            </header>
+
+            <!-- Chat Container -->
+            <div class="chat-container" id="chat-container">
+                <!-- Welcome/Empty State -->
+                <div class="welcome-state" id="welcome-state">
+                    <div class="logo-large">
+                        <img src="logo.png" alt="Logo" style="width: 64px; height: 64px; object-fit: contain;">
+                    </div>
+                    <h1>How can I help you today?</h1>
+                    <div class="suggestion-grid">
+                        <div class="suggestion-card">
+                            <i class="fa-solid fa-code"></i>
+                            <p>Write an HTML template for a chat interface</p>
+                        </div>
+                        <div class="suggestion-card">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <p>Brainstorm names for a new tech startup</p>
+                        </div>
+                        <div class="suggestion-card">
+                            <i class="fa-solid fa-language"></i>
+                            <p>Translate a business email to Spanish</p>
+                        </div>
+                        <div class="suggestion-card">
+                            <i class="fa-solid fa-book-open"></i>
+                            <p>Summarize the latest trends in AI</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Messages will be injected here -->
+                <div class="messages" id="messages"></div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-container">
+                    <button class="input-action-btn"><i class="fa-solid fa-paperclip"></i></button>
+                    <textarea id="message-input" placeholder="Send a message..." rows="1"></textarea>
+                    <button id="send-btn" class="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+                <p class="disclaimer">AI can make mistakes. Verify important information.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
